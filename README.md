@@ -70,12 +70,11 @@ customer-segmentation-churn-prediction/
 ## 🚀 How to Use
 
 - Clone this repository:
-  - xxx
-  - cd
+  - git clone https://github.com/sgandhi797/project-python-customer-segmentation-churn-prediction.git
+  - cd project-python-customer-segmentation-churn-prediction
 - Install requirements:
-  - xxx
-  - yyy
-  - zzz
+  - Download Anaconda Navigator
+  - Install Jupyter Notebook from the Navigator
 - Open and run the notebook:
   - xxx  
 
