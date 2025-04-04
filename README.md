@@ -40,13 +40,13 @@ customer-segmentation-churn-prediction/
 
 ## 🔍 Key Steps
 
-- **RFM Analysis**
+- 📊 **RFM Analysis**
   - Calculated Recency, Frequency, and Monetary Value for each customer
   - Standardized features for clustering
-- **Customer Segmentation (K-Means)**
+- 📈 **Customer Segmentation (K-Means)**
   - Used the Elbow Method to find optimal number of clusters
   - Segmented customers into 4 behavior-based groups
-- **Churn Prediction**
+- 🔮 **Churn Prediction**
   - Labeled churned customers based on recency > 180 days
   - Trained a Random Forest classifier to predict churn
   - Evaluated model performance with precision, recall, F1-score
@@ -61,15 +61,35 @@ customer-segmentation-churn-prediction/
 
 ## 📌 Key Insights
 
+- High-value customers often have low recency (recent activity) and high frequency
+- A cluster of customers showed high spend but long inactivity → ideal for retention targeting
+- The churn prediction model achieved strong recall on identifying at-risk customers
+
 ---
 
 ## 🚀 How to Use
+
+- Clone this repository:
+  - xxx
+  - cd
+- Install requirements:
+  - xxx
+  - yyy
+  - zzz
+- Open and run the notebook:
+  - xxx  
 
 ---
 
 ## 📚 Tools & Technologies
 
---- 
+- Python 3
+- Pandas and NumPy for data handling
+- Matplotlib and Seaborn for visualization
+- Scikit-learn for clustering and classification
+- Jupyter Notebook for interactive analysis
+
+---
 
 ## 📄 License
 
