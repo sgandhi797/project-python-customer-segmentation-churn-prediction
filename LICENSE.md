@@ -1,6 +1,6 @@
 ## MIT License
 
-**Copyright (c) 2025 Sunny Gandhi**
+**Copyright (c) 2025 sgandhi797**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
