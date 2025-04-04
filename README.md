@@ -1,4 +1,4 @@
-# 👥 Customer Segmentation & Churn Prediction (E-Commerce)
+# 👥 Customer Segmentation & Churn Prediction (Python Project)
 
 > This project leverages Python to perform customer segmentation using RFM (Recency, Frequency, Monetary) analysis and predicts customer churn using machine learning techniques. The analysis is based on e-commerce transaction data.
 
@@ -20,7 +20,7 @@
 
 ---
 
-## 🧱 Project Structure
+## 📂 Project Structure
 
 ```text
 customer-segmentation-churn-prediction/
@@ -38,15 +38,39 @@ customer-segmentation-churn-prediction/
 
 ---
 
-## 💡 Business Questions Answered
+## 🔍 Key Steps
 
+- **RFM Analysis**
+  - Calculated Recency, Frequency, and Monetary Value for each customer
+  - Standardized features for clustering
+- **Customer Segmentation (K-Means)**
+  - Used the Elbow Method to find optimal number of clusters
+  - Segmented customers into 4 behavior-based groups
+- **Churn Prediction**
+  - Labeled churned customers based on recency > 180 days
+  - Trained a Random Forest classifier to predict churn
+  - Evaluated model performance with precision, recall, F1-score
 
 ---
 
-## 🔍 Key Python Queries
+## 🖼 Visualizations
 
+![clusters_plot](https://github.com/user-attachments/assets/9814109c-75a4-48a6-9253-b690bbefc9a8)
 
+---
 
+## 📌 Key Insights
 
+---
 
+## 🚀 How to Use
 
+---
+
+## 📚 Tools & Technologies
+
+--- 
+
+## 📄 License
+
+- This project is licensed under the MIT License.
