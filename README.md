@@ -16,8 +16,8 @@
 ## 📦 Dataset
 
 - **Source**: [Kaggle – E-Commerce Data](https://www.kaggle.com/datasets/carrie1/ecommerce-data)
-- **Created By**: UC Irvine Machine Learning Repository
-- The dataset contains transactions from an online retailer between 01/12/2010 and 09/12/2011 and contains fields such as `InvoiceNo`, `StockCode`, `Description`, `Quantity`, `InvoiceDate`, `UnitPrice`, `CustomerID`, and `Country`.
+- The dataset was originally created by the **UC Irvine Machine Learning Repository**.
+- The dataset includes transactions from an online retailer between 01/12/2010 and 09/12/2011 and contains fields such as `InvoiceNo`, `StockCode`, `Description`, `Quantity`, `InvoiceDate`, `UnitPrice`, `CustomerID`, and `Country`.
 
 ---
 
@@ -28,10 +28,11 @@ customer-segmentation-churn-prediction/
 ├── data/
 │   └── ecommerce-data.csv
 ├── notebooks/
-│   └── customer_segmentation.ipynb
+│   └── Project - Jupyter Notebook - Customer Segmentation and Churn Prediction.ipynb
 ├── src/
 │   └── *.py (scripts)
 ├── visuals/
+└── clusters_plot.png
 ├── models/
 ├── requirements.txt
 └── README.md
@@ -39,7 +40,7 @@ customer-segmentation-churn-prediction/
 
 ---
 
-## 🔍 Key Steps
+## 💡 Key Steps
 
 - 📊 **RFM Analysis**
   - Calculated Recency, Frequency, and Monetary Value for each customer
@@ -54,7 +55,13 @@ customer-segmentation-churn-prediction/
 
 ---
 
-## 🖼 Visualizations
+## 🔍 Key Python Queries
+
+
+
+---
+
+## 📊 Visualizations
 
 ![clusters_plot](https://github.com/user-attachments/assets/9814109c-75a4-48a6-9253-b690bbefc9a8)
 
