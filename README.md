@@ -150,25 +150,25 @@
 
 ```text
 project-python-customer-segmentation-churn-prediction/
-├── data/
+├── Data/
 │   └── ecommerce-data.csv                   # Original Kaggle dataset
 │
-├── notebooks/
+├── Notebooks/
 │   └── customer_segmentation.ipynb          # Complete Jupyter Notebook analysis
 │
-├── src/
+├── Source/
 │   ├── data_preprocessing.py                # Cleaning, feature engineering, total price calculation
 │   ├── rfm_analysis.py                      # Recency, Frequency, Monetary value calculation
 │   ├── clustering.py                        # K-Means clustering logic and visualizations
 │   └── churn_prediction.py                  # Model training, evaluation, and saving
 │
-├── models/
+├── Models/
 │   └── churn_model.pkl                      # Trained Random Forest model
 │
-├── visuals/
+├── Visuals/
 │   └── clusters_plot.png                    # Visualization of customer segments
 │
-├── reports/
+├── Reports/
 │   └── insights_summary.md                  # Business-style insights and summary report
 │
 ├── requirements.txt                         # Python libraries needed to run this project
