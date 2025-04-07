@@ -16,7 +16,8 @@
 ## 📦 Dataset
 
 - **Source**: [Kaggle – E-Commerce Data](https://www.kaggle.com/datasets/carrie1/ecommerce-data)
-- The dataset was made by the **UC Irvine Machine Learning Repository** and contains transactions from an online retailer between 01/12/2010 and 09/12/2011.
+- **Created By**: UC Irvine Machine Learning Repository
+- The dataset contains transactions from an online retailer between 01/12/2010 and 09/12/2011 and contains fields such as `InvoiceNo`, `StockCode`, `Description`, `Quantity`, `InvoiceDate`, `UnitPrice`, `CustomerID`, and `Country`.
 
 ---
 
