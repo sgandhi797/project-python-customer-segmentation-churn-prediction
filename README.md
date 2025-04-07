@@ -57,7 +57,111 @@ customer-segmentation-churn-prediction/
 
 ## 🔍 Key Python Queries
 
+- `STEP 1: Load and Explore Dataset`
+  ```python
+  import pandas as pd
+  import matplotlib.pyplot as plt
+  import seaborn as sns
+  import datetime
+  ```
 
+- `Read the Dataset`
+  ```python
+  df = pd.read_csv(r"C:\Users\sgand\OneDrive\Documents\Data Analysis\Python\Customer Segmentation and Churn 
+  Prediction\ecommerce-data.csv")
+  ```
+
+- `Basic Cleanup`
+  ```python
+  df.dropna(subset=['CustomerID'], inplace=True)
+  df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'])
+  df['TotalPrice'] = df['Quantity'] * df['UnitPrice']
+  df = df[~df['InvoiceNo'].astype(str).str.startswith('C')]
+  ```
+
+- `STEP 2: RFM Analysis`
+  ```python
+  snapshot_date = df['InvoiceDate'].max() + datetime.timedelta(days=1)
+  rfm = df.groupby('CustomerID').agg({
+      'InvoiceDate': lambda x: (snapshot_date - x.max()).days,
+      'InvoiceNo': 'nunique',
+      'TotalPrice': 'sum'
+  })
+  rfm.rename(columns={
+      'InvoiceDate': 'Recency',
+      'InvoiceNo': 'Frequency',
+      'TotalPrice': 'MonetaryValue'
+  }, inplace=True)
+  ```
+
+- `STEP 3: Scaling and Clustering`
+  ```python
+  from sklearn.preprocessing import StandardScaler
+  from sklearn.cluster import KMeans
+
+  scaler = StandardScaler()
+  rfm_scaled = scaler.fit_transform(rfm)
+  ```
+
+- `Elbow Method`
+  ```python
+  sse = {}
+  for k in range(1, 10):
+      kmeans = KMeans(n_clusters=k, random_state=1)
+      kmeans.fit(rfm_scaled)
+      sse[k] = kmeans.inertia_
+
+  plt.figure(figsize=(8,5))
+  plt.plot(list(sse.keys()), list(sse.values()), marker='o')
+  plt.xlabel("Number of clusters")
+  plt.ylabel("SSE")
+  plt.title("Elbow Method for Optimal K")
+  plt.show()
+  ```
+
+- `Apply KMeans with K=4`
+  ```python
+  kmeans = KMeans(n_clusters=4, random_state=1)
+  rfm['Cluster'] = kmeans.fit_predict(rfm_scaled)
+  ```
+
+- `Visualize Clusters`
+  ```python
+  sns.pairplot(rfm.reset_index(), hue='Cluster', palette='Set1', height=3)
+  plt.savefig(r"C:\Users\sgand\OneDrive\Documents\Data Analysis\Python\Customer Segmentation and Churn 
+  Prediction/clusters_plot.png")
+  ```
+
+- `STEP 4: Churn Prediction`
+  ```python
+  from sklearn.model_selection import train_test_split
+  from sklearn.ensemble import RandomForestClassifier
+  from sklearn.metrics import classification_report
+  import joblib
+  ```
+
+- `Define Churn Label (Recency > 180 days)`
+  ```python
+  rfm['Churn'] = rfm['Recency'].apply(lambda x: 1 if x > 180 else 0)
+  ```
+
+- `Train/Test Split`
+  ```python
+  model = RandomForestClassifier()
+  model.fit(X_train, y_train)
+  ```
+
+- `Evaluate`
+  ```python
+  y_pred = model.predict(X_test)
+  print(classification_report(y_test, y_pred))
+  ```
+
+- `Save Model`
+  ```python
+  joblib.dump(model, r"C:\Users\sgand\OneDrive\Documents\Data Analysis\Python\Customer Segmentation and Churn  
+  Prediction/customer-segmentation-churn_model.pkl")
+  ```
 
 ---
 
