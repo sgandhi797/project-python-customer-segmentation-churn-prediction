@@ -1,15 +1,15 @@
 # 👥 Customer Segmentation & Churn Prediction (Python Project)
 
-> This project leverages Python to perform customer segmentation using RFM (Recency, Frequency, Monetary) analysis and predicts customer churn using machine learning techniques. The analysis is based on e-commerce transaction data.
+ > Understanding customer behavior is vital for enhancing retention strategies. This project aims to:
+ >   - **Segment customers** based on purchasing behavior using RFM analysis.
+ >    - **Identify high-risk customers** likely to churn.
+ >    - **Develop predictive models** to anticipate customer churn.
 
 ---
 
 ## 📈 Project Overview
 
-- Understanding customer behavior is vital for enhancing retention strategies. This project aims to:
-  - **Segment customers** based on purchasing behavior using RFM analysis.
-  - **Identify high-risk customers** likely to churn.
-  - **Develop predictive models** to anticipate customer churn.
+
 
 ---
 
