@@ -21,25 +21,6 @@
 
 ---
 
-## 📂 Project Structure
-
-```text
-customer-segmentation-churn-prediction/
-├── dataset/
-│   └── ecommerce-data.xlsx 
-├── notebooks/
-│   └── Project - Jupyter Notebook - Customer Segmentation and Churn Prediction.ipynb
-├── src/
-│   └── *.py (scripts)
-├── visuals/
-└── clusters_plot.png
-├── models/
-├── requirements.txt
-└── README.md
-```
-
----
-
 ## 💡 Key Steps
 
 - 📊 **RFM Analysis**
@@ -162,6 +143,39 @@ customer-segmentation-churn-prediction/
   joblib.dump(model, r"C:\Users\sgand\OneDrive\Documents\Data Analysis\Python\Customer Segmentation and Churn  
   Prediction/customer-segmentation-churn_model.pkl")
   ```
+
+---
+
+## 📂 Project Structure
+
+```text
+project-python-customer-segmentation-churn-prediction/
+├── data/
+│   └── ecommerce-data.csv                   # Original Kaggle dataset
+│
+├── notebooks/
+│   └── customer_segmentation.ipynb          # Complete Jupyter Notebook analysis
+│
+├── src/
+│   ├── data_preprocessing.py                # Cleaning, feature engineering, total price calculation
+│   ├── rfm_analysis.py                      # Recency, Frequency, Monetary value calculation
+│   ├── clustering.py                        # K-Means clustering logic and visualizations
+│   └── churn_prediction.py                  # Model training, evaluation, and saving
+│
+├── models/
+│   └── churn_model.pkl                      # Trained Random Forest model
+│
+├── visuals/
+│   └── clusters_plot.png                    # Visualization of customer segments
+│
+├── reports/
+│   └── insights_summary.md                  # Business-style insights and summary report
+│
+├── requirements.txt                         # Python libraries needed to run this project
+├── .gitignore                               # Ignore checkpoints, system files, and data
+├── README.md                                # Full project overview and usage guide
+└── LICENSE                                  # MIT License file
+```
 
 ---
 
