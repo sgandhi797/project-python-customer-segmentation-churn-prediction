@@ -25,8 +25,8 @@
 
 ```text
 customer-segmentation-churn-prediction/
-├── data/
-│   └── ecommerce-data.csv
+├── dataset/
+│   └── ecommerce-data.xlsx 
 ├── notebooks/
 │   └── Project - Jupyter Notebook - Customer Segmentation and Churn Prediction.ipynb
 ├── src/
@@ -78,13 +78,13 @@ customer-segmentation-churn-prediction/
 ## 🚀 How to Use
 
 - Clone this repository:
-  - git clone https://github.com/sgandhi797/project-python-customer-segmentation-churn-prediction.git
+  - `git clone https://github.com/sgandhi797/project-python-customer-segmentation-churn-prediction.git`
   - cd project-python-customer-segmentation-churn-prediction
 - Install requirements:
   - Download Anaconda Navigator
   - Install Jupyter Notebook from the Navigator
 - Open and run the notebook:
-  - xxx  
+  - jupyter notebook/Project - Jupyter Notebook - Customer Segmentation and Churn Prediction.ipynb
 
 ---
 
